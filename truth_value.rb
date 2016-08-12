@@ -91,17 +91,22 @@ end
 
 def eval_statement string
 
-  var1 ,var2 , operator = string[0] , string[2] , string[1]
-  if operator == "."
-    return operator_and(var1,var2)
-  elsif operator == "v"
-    return operator_or(var1,var2)
-  elsif operator == ">"
-    return operator_if(var1,var2)
-  elsif operator == "="
-    return operator_iff(var1,var2)  
-  end
-
+  if string.length == 1
+    return string[0]
+  elsif string.length == 2
+    return operator_not(string[1])
+  else
+    var1 ,var2 , operator = string[0] , string[2] , string[1]
+    if operator == "."
+      return operator_and(var1,var2)
+    elsif operator == "v"
+      return operator_or(var1,var2)
+    elsif operator == ">"
+      return operator_if(var1,var2)
+    elsif operator == "="
+      return operator_iff(var1,var2)  
+    end
+  end  
 end
 
 def get_index array , value
@@ -212,30 +217,40 @@ def read_statement statement , variables
 
 end
 
+puts ""
 puts "How many variables would you like to input?"
 nInput = gets.chomp.to_i
 input = []
+puts ""
 puts "Enter variables with syntax like 'A=T' or 'B=F'."
 
 for i in (1..nInput)
+  puts ""
   puts "Enter input variable ##{i} : "
   input.push(gets.chomp)
 end
 
 input = input.join(",")
+puts ""
 puts "How many truth functional propositions would you like to input?"
 nStatement = gets.chomp.to_i
-statements = []
+statements = [] 
+puts ""
 puts "Enter truth functional propositions with syntax like '((A.B)>C)vD' or '~B=~C'. \nOperators : ~ (NOT) , . (AND) , v (OR) , > (IF-THEN) , = (IFF)."
 
 for i in (1..nStatement)
+  puts ""
   puts "Enter truth functional proposition ##{i} : "
-  statements.push(gets.chomp)
+  stat = gets.chomp
+  statements.push(stat)
 end
 
 variables , i = get_variables(input) , 1
 
+puts ""
 statements.each do |s|
-  puts "Truth value of truth functional proposition #{i} : #{read_statement(s,variables)}"
+  puts "Truth value of truth functional proposition ##{i} : #{read_statement(s,variables)}"
   i = i+1
 end
+
+puts ""
