@@ -1,11 +1,13 @@
 SYMBOLIC LOGIC [![forthebadge](http://forthebadge.com/images/badges/built-with-ruby.svg)](http://forthebadge.com)
 --------------
-Symbolic Logic (HS30068) is a course taken by Prof. Chhanda Chakraborthy at IIT Kharagour. Thise repository is a showcase of codes that implement the methodology of automated solving of symbolic logic methods that are taught in class.
+Symbolic Logic (HS30068) is a course taken by Prof. Chhanda Chakraborthy at IIT Kharagour. Thise repository is a showcase of codes that implement the automated solving of symbolic logic methods that are taught in class.
 
-`truth_value.rb`
-----------------
-This is a code that takes truth-valued variables as input and then decides the truth-value of a truth functional statement. For example,
-<br> <img src = "images/truth_value.png">
+SCRIPTS
+-------
+
+- [x] `truth_value.rb` 
+  - [x] This is a code that takes truth-valued variables as input and then decides the truth-value of a truth functional statement. For example,
+        <br> <img src = "images/truth_value.png">
 
 USING SYMBOLIC-LOGIC SCRIPTS
 ----------------------------
