@@ -6,8 +6,8 @@ SCRIPTS
 -------
 
 - [x] `truth_value.rb` 
-  - [x] This is a code that takes truth-valued variables as input and then decides the truth-value of a truth functional statement. For example,
-        <br> <img src = "images/truth_value.png">
+  - [x] This is a code that takes truth-valued variables as input and then decides the truth-value of a truth functional statement.
+  - [x] A working sample of the code is attached below.  <br> <img src = "images/truth_value.png">
 
 USING SYMBOLIC-LOGIC SCRIPTS
 ----------------------------
